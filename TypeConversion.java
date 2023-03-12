@@ -19,9 +19,9 @@ public class TypeConversion {
         for (int i=0; i<array.length; i++) {
             integers2[i] = array[i];
         }
-        System.out.println(Arrays.toString(integers));  //[1, 2, 3, 4, 5]
-        System.out.println(Arrays.toString(integers1)); //[1, 2, 3, 4, 5]
-        System.out.println(Arrays.toString(integers2)); //[1, 2, 3, 4, 5]
+        //System.out.println(Arrays.toString(integers));  //[1, 2, 3, 4, 5]
+        //System.out.println(Arrays.toString(integers1)); //[1, 2, 3, 4, 5]
+        //System.out.println(Arrays.toString(integers2)); //[1, 2, 3, 4, 5]
 
         /*
                 converting int to list
@@ -43,7 +43,19 @@ public class TypeConversion {
         for (int i=0; i<array2.length; i++) {
             array2[i] = integers[i];
         }
-        System.out.println(Arrays.toString(array2));
+        //System.out.println(Arrays.toString(array2));
+
+        /*
+                Integer to List
+         */
+        List<Integer> list2 = List.of(integers1);
+        System.out.println(list2);
+        //or
+        List<Integer> list3 = Arrays.asList(integers1);
+        System.out.println(list3);
+        //or
+        List<Integer> list4 = Arrays.stream(integers1).collect(Collectors.toList());
+        System.out.println(list4);
 
     }
 }
